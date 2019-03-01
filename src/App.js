@@ -24,7 +24,7 @@ class App extends Component {
 
   _callApi = () => {
     // fetch 라는 이름의 promise 를 return 한다. 
-    return fetch('https://yts.am/api/v2/list_movies.json?sory_by=rating')
+    return fetch('https://yts.am/api/v2/list_movies.json?sort_by=download_count')
     .then(potato => potato.json()) // status : 200 (Successed), ReadableStream : binary data
     .then(json => json.data.movies)
     .catch(err => console.log(err))
